@@ -23,10 +23,9 @@ class GPSSocketServer {
                 socket.withStreams { input, output ->
 
                     def reader = input.newReader()
-                    def buffer = reader.readLine()
-                    println "Request received: "
+                    println "Request received "
                     Map gps = receiver.gps
-                    output << receiver.hasFix ? gps.latitude + ";" + gps.longitude : "0;0"
+                    output << ((receiver.hasFix) ? gps.latitude + ";" + gps.longitude : "0;0")
                 }
                 println 'Processing/thread completed'
 
