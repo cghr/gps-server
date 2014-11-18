@@ -22,20 +22,20 @@ How it Works:
   NMEA sentences sent by the GPS device and filters out the sentence that has a GPS fix.
   eg. 
   
-  `$--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx
-  hhmmss.ss = UTC of position 
-  llll.ll = latitude of position
-  a = N or S
-  yyyyy.yy = Longitude of position
-  a = E or W 
-  x = GPS Quality indicator (0=no fix, 1=GPS fix, 2=Dif. GPS fix) 
-  xx = number of satellites in use 
-  x.x = horizontal dilution of precision 
-  x.x = Antenna altitude above mean-sea-level
-  M = units of antenna altitude, meters 
-  x.x = Geoidal separation
-  M = units of geoidal separation, meters 
-  x.x = Age of Differential GPS data (seconds) 
-  xxxx = Differential reference station ID` 
+  `$--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx  
+  hhmmss.ss = UTC of position  
+  llll.ll = latitude of position  
+  a = N or S  
+  yyyyy.yy = Longitude of position  
+  a = E or W   
+  x = GPS Quality indicator (0=no fix, 1=GPS fix, 2=Dif. GPS fix)   
+  xx = number of satellites in use   
+  x.x = horizontal dilution of precision   
+  x.x = Antenna altitude above mean-sea-level  
+  M = units of antenna altitude, meters   
+  x.x = Geoidal separation  
+  M = units of geoidal separation, meters   
+  x.x = Age of Differential GPS data (seconds)   
+  xxxx = Differential reference station ID`   
 
 
