@@ -22,7 +22,7 @@ How it Works:
   NMEA sentences sent by the GPS device and filters out the sentence that has a GPS fix.
   eg. 
   
-  $--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx<br>
+  $GPGGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx<br>
     hhmmss.ss = UTC of position <br>
     llll.ll = latitude of position<br>
     a = N or S<br>
@@ -38,3 +38,8 @@ How it Works:
     x.x = Age of Differential GPS data (seconds)<br> 
     xxxx = Differential reference station ID <br>
   
+  And extracts the GPS fix out of the sentence.
+  When a client requests the Socket Server listening @ port `4444`,it responds with the GPS fix data if available in the following 
+  format.
+  Eg: `123.45;456.789` - latitude and longitude co-ordinates will be available as semi-colon(;) delimited values,if the socket server
+  responds with `0;0` it says that the gps is not fixed yet.
