@@ -25,4 +25,16 @@ How it Works:
   $--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx<br>
     hhmmss.ss = UTC of position <br>
     llll.ll = latitude of position<br>
+    a = N or S<br>
+    yyyyy.yy = Longitude of position<br>
+    a = E or W <br>
+    x = GPS Quality indicator (0=no fix, 1=GPS fix, 2=Dif. GPS fix)<br> 
+    xx = number of satellites in use <br>
+    x.x = horizontal dilution of precision<br> 
+    x.x = Antenna altitude above mean-sea-level<br>
+    M = units of antenna altitude, meters <br>
+    x.x = Geoidal separation<br>
+    M = units of geoidal separation, meters<br> 
+    x.x = Age of Differential GPS data (seconds)<br> 
+    xxxx = Differential reference station ID <br>
   
