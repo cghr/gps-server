@@ -1,18 +1,41 @@
 GPS Utility module which directly talks to connected GPS devices via NMEA 0183 protocol and makes the GPS fix data available on a socket server listening
 to port:4444
 
-Run the Utility:
-===============
+Requirements:
+=============
 
- Requirements:
- =============
  * JDK 1.7 or higher
  * gradle build system
  
- 1.Clone the project.
- 2.Unzip and cd to the project.
- 3.Run gradle fatJar which creates a gps-server.jar with dependencies.
- 4.Run the jar with (java -jar gps-server.jar)
- 5.This will run the gps-server and makes the GPS fix data available at socket port:4444
+Run the Utility:
+===============
+
+ * Clone the project.
+ * Unzip and cd to the project.
+ * Run `gradle fatJar` which creates a gps-server.jar with dependencies in the build directory
+ * Run the jar with command (java -jar gps-server.jar)
+ * This will run the gps-server and makes the GPS fix data available at socket port:4444 provided the GPS device is connected and working
  
-How it Works: 
+How it Works:
+=============
+  GPS Server uses marine-api library to parse the NMEA sentences emitted by various devices connected to COMM port.Gps Server receives all the 
+  NMEA sentences sent by the GPS device and filters out the sentence that has a GPS fix.
+  eg. 
+  
+  `$--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx
+  hhmmss.ss = UTC of position 
+  llll.ll = latitude of position
+  a = N or S
+  yyyyy.yy = Longitude of position
+  a = E or W 
+  x = GPS Quality indicator (0=no fix, 1=GPS fix, 2=Dif. GPS fix) 
+  xx = number of satellites in use 
+  x.x = horizontal dilution of precision 
+  x.x = Antenna altitude above mean-sea-level
+  M = units of antenna altitude, meters 
+  x.x = Geoidal separation
+  M = units of geoidal separation, meters 
+  x.x = Age of Differential GPS data (seconds) 
+  xxxx = Differential reference station ID` 
+
+
