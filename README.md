@@ -22,7 +22,7 @@ How it Works:
   NMEA sentences sent by the GPS device and filters out the sentence that has a GPS fix.
   eg. 
   
-  $--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx
-    hhmmss.ss = UTC of position 
-    llll.ll = latitude of position
+  $--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx<br>
+    hhmmss.ss = UTC of position <br>
+    llll.ll = latitude of position<br>
   
